@@ -4,6 +4,19 @@ import { FiGithub, FiExternalLink, FiCode } from 'react-icons/fi';
 const Projects = () => {
   const projects = [
     {
+      title: 'Student Management System',
+      description: 'Full-featured MERN stack student management platform with comprehensive assessment, attendance tracking, and schedule management capabilities.',
+      type: 'Personal Project',
+      technologies: ['React.js', 'Node.js', 'Express', 'MongoDB', 'JavaScript'],
+      features: [
+        'Student assessment with scoring system',
+        'Attendance tracking and monitoring',
+        'Schedule import and management',
+        'Real-time data synchronization',
+      ],
+      gradient: 'from-cyan-500 to-blue-600',
+    },
+    {
       title: 'Automated Student Clearance System',
       description: 'A comprehensive system for managing student clearance processes, automating approval workflows and document tracking.',
       type: 'Capstone Project',
@@ -46,7 +59,7 @@ const Projects = () => {
       title: 'Healthcare Application',
       description: 'Medical facility management system for patient records, appointments, and healthcare service delivery.',
       type: 'Freelance Project',
-      technologies: ['Node.js', 'MongoDB', 'Vue.js', 'Express', 'Socket.io'],
+      technologies: ['Android Studio', 'Java', 'MySQL'],
       features: [
         'Patient record management',
         'Appointment scheduling',
