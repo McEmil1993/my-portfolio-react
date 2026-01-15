@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { 
   SiPhp, SiLaravel, SiNodedotjs, SiExpress, SiTypescript, SiJavascript, SiVuedotjs, 
   SiReact, SiNextdotjs, SiHtml5, SiCss3, SiBootstrap, SiTailwindcss,
-  SiMysql, SiMongodb, SiRedis, SiNginx, SiDocker, SiGit, SiGitlab,
+  SiMysql, SiMongodb, SiRedis, SiNginx, SiApache, SiDocker, SiGit, SiGitlab,
   SiAmazonwebservices, SiLinux, SiAndroid, SiPython, SiAwslambda,
   SiSocketdotio, SiFlutter, SiDotnet
 } from 'react-icons/si';
@@ -20,7 +20,7 @@ const Skills = () => {
         { name: 'Node.js', icon: SiNodedotjs, years: '4 years', level: 90 },
         { name: 'Express JS', icon: SiExpress, years: '1 year', level: 80 },
         { name: 'TypeScript', icon: SiTypescript, years: '1 year', level: 80 },
-        { name: 'Python Lambda', icon: SiAmazonwebservices, years: '2 years', level: 75 },
+        { name: 'Python Lambda', icon: SiAwslambda, years: '2 years', level: 75 },
         { name: 'Python', icon: SiPython, years: '3 years', level: 75 },
         { name: 'Java', icon: FaJava, years: '2 years', level: 70 },
         { name: 'C#', icon: TbBrandCSharp, years: '1 year', level: 50 },
@@ -60,6 +60,7 @@ const Skills = () => {
       skills: [
         { name: 'Docker', icon: SiDocker, years: '4 years', level: 90 },
         { name: 'Nginx', icon: SiNginx, years: '4 years', level: 90 },
+        { name: 'Apache', icon: SiApache, years: '4 years', level: 90 },
         { name: 'GitLab CI/CD', icon: SiGitlab, years: '4 years', level: 85 },
         { name: 'Git', icon: SiGit, years: '6 years', level: 95 },
         { name: 'AWS', icon: SiAmazonwebservices, years: '2 years', level: 75 },
