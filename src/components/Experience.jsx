@@ -25,7 +25,7 @@ const Experience = () => {
     },
     {
       title: 'Software Developer',
-      company: 'Pojas Pharmacy',
+      company: 'Pharmacy',
       location: 'Talibon, Bohol',
       period: 'Jan 2022 – Jun 2022',
       type: 'Full-time',

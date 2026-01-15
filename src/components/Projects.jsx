@@ -18,7 +18,7 @@ const Projects = () => {
     },
     {
       title: 'POS System for Pharmacy',
-      description: 'Point of Sale system for Pojas Pharmacy with inventory management, sales tracking, and reporting features.',
+      description: 'Point of Sale system for Pharmacy with inventory management, sales tracking, and reporting features.',
       type: 'Professional Project',
       technologies: ['PHP', 'Laravel', 'MySQL', 'Vue.js', 'Tailwind CSS'],
       features: [
