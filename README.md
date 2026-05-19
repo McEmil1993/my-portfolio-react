@@ -151,7 +151,7 @@ This project is open source and available for personal use.
 ## 📧 Contact
 
 - **Email:** markemildacoylo209@gmail.com
-- **Phone:** +639952788209
+- **Phone:** 9273367353
 - **GitHub:** [github.com/McEmil1993](https://github.com/McEmil1993)
 - **Location:** Purok 7 Balintawak, Talibon, Bohol 6325
 

@@ -14,7 +14,6 @@ const Projects = () => {
         'Schedule import and management',
         'Real-time data synchronization',
       ],
-      gradient: 'from-cyan-500 to-blue-600',
     },
     {
       title: 'Automated Student Clearance System',
@@ -27,7 +26,6 @@ const Projects = () => {
         'Document tracking and management',
         'Real-time status updates',
       ],
-      gradient: 'from-blue-500 to-purple-600',
     },
     {
       title: 'POS System for Pharmacy',
@@ -40,7 +38,6 @@ const Projects = () => {
         'Customer management system',
         'Automated reporting and analytics',
       ],
-      gradient: 'from-green-500 to-teal-600',
     },
     {
       title: 'School Management System',
@@ -53,7 +50,6 @@ const Projects = () => {
         'Grade management and report cards',
         'Parent and teacher portals',
       ],
-      gradient: 'from-orange-500 to-red-600',
     },
     {
       title: 'Healthcare Application',
@@ -66,7 +62,6 @@ const Projects = () => {
         'Medical history tracking',
         'Real-time notifications',
       ],
-      gradient: 'from-pink-500 to-purple-600',
     },
     {
       title: 'Inventory Management System',
@@ -79,7 +74,6 @@ const Projects = () => {
         'Purchase order automation',
         'Low stock alerts and reports',
       ],
-      gradient: 'from-indigo-500 to-blue-600',
     },
     {
       title: 'Digital Advertising Platform',
@@ -92,12 +86,11 @@ const Projects = () => {
         'Client portal and billing',
         'Automated deployment with CI/CD',
       ],
-      gradient: 'from-yellow-500 to-orange-600',
     },
   ];
 
   return (
-    <section id="projects" className="section-container bg-gray-50 dark:bg-gray-900/50">
+    <section id="projects" className="section-container">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -106,7 +99,7 @@ const Projects = () => {
       >
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Featured <span className="gradient-text">Projects</span>
+            Featured <span className="accent-text">Projects</span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             A showcase of my recent work and key projects
@@ -121,13 +114,12 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="glass rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group"
+              className="glass rounded-lg overflow-hidden hover:border-primary-300 dark:hover:border-primary-800 transition-colors duration-200 group"
             >
-              {/* Project Header with Gradient */}
-              <div className={`h-40 bg-gradient-to-br ${project.gradient} p-6 flex items-center justify-center relative overflow-hidden`}>
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
-                <FiCode className="text-white text-6xl opacity-20 absolute" />
-                <span className="relative z-10 px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-semibold">
+              {/* Project Header */}
+              <div className="h-32 bg-gray-100 dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800 p-6 flex items-center justify-between">
+                <FiCode className="text-primary-700 dark:text-primary-300 text-3xl" />
+                <span className="px-3 py-1 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-sm font-semibold">
                   {project.type}
                 </span>
               </div>
@@ -148,7 +140,7 @@ const Projects = () => {
                   <ul className="space-y-1">
                     {project.features.map((feature, idx) => (
                       <li key={idx} className="text-xs text-gray-600 dark:text-gray-400 flex items-start space-x-2">
-                        <span className="mt-1.5 w-1 h-1 bg-primary-500 rounded-full flex-shrink-0"></span>
+                        <span className="mt-1.5 w-1 h-1 bg-primary-700 dark:bg-primary-400 rounded-full flex-shrink-0"></span>
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -160,7 +152,7 @@ const Projects = () => {
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-xs font-medium"
+                      className="px-2 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded text-xs font-medium"
                     >
                       {tech}
                     </span>
@@ -183,7 +175,7 @@ const Projects = () => {
             href="https://github.com/McEmil1993"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 px-8 py-3 glass hover:bg-primary-500 hover:text-white transition-all duration-300 rounded-lg font-semibold transform hover:scale-105"
+            className="inline-flex items-center space-x-2 px-8 py-3 glass hover:border-primary-300 dark:hover:border-primary-800 hover:text-primary-700 dark:hover:text-primary-300 transition-colors duration-200 rounded-lg font-semibold"
           >
             <FiGithub size={24} />
             <span>View More on GitHub</span>

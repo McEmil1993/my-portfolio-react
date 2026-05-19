@@ -36,13 +36,13 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'glass py-4' : 'bg-transparent py-6'
+        scrolled ? 'glass py-4' : 'bg-white/90 dark:bg-gray-950/90 py-6'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#home" className="text-2xl font-bold gradient-text">
+          <a href="#home" className="text-2xl font-bold text-gray-950 dark:text-white">
             MD
           </a>
 
@@ -53,7 +53,7 @@ const Navbar = () => {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => scrollToSection(e, item.href)}
-                className="text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-200 font-medium"
+                className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary-700 dark:hover:text-primary-300 transition-colors duration-200"
               >
                 {item.name}
               </a>
@@ -62,7 +62,7 @@ const Navbar = () => {
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200"
+              className="p-2 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 hover:border-primary-300 dark:hover:border-primary-700 transition-colors duration-200"
               aria-label="Toggle theme"
             >
               {isDark ? <FiSun size={20} /> : <FiMoon size={20} />}
@@ -73,14 +73,14 @@ const Navbar = () => {
           <div className="md:hidden flex items-center space-x-4">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700"
+              className="p-2 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900"
               aria-label="Toggle theme"
             >
               {isDark ? <FiSun size={20} /> : <FiMoon size={20} />}
             </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700"
+              className="p-2 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900"
               aria-label="Toggle menu"
             >
               {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
@@ -96,7 +96,7 @@ const Navbar = () => {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => scrollToSection(e, item.href)}
-                className="block py-3 text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-200 font-medium"
+                className="block py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-700 dark:hover:text-primary-300 transition-colors duration-200"
               >
                 {item.name}
               </a>

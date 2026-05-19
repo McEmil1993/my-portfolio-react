@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FiMail, FiPhone, FiMapPin, FiGithub, FiLinkedin, FiSend } from 'react-icons/fi';
+import { FiMail, FiPhone, FiMapPin, FiGithub, FiBriefcase, FiSend } from 'react-icons/fi';
 import { useState } from 'react';
 
 const Contact = () => {
@@ -16,28 +16,24 @@ const Contact = () => {
       title: 'Email',
       value: 'markemildacoylo209@gmail.com',
       href: 'mailto:markemildacoylo209@gmail.com',
-      gradient: 'from-blue-500 to-blue-600',
     },
     {
       icon: FiPhone,
       title: 'Phone',
-      value: '+639952788209',
-      href: 'tel:+639952788209',
-      gradient: 'from-green-500 to-green-600',
+      value: '9273367353',
+      href: 'tel:9273367353',
     },
     {
       icon: FiMapPin,
       title: 'Location',
       value: 'Purok 7 Balintawak, Talibon, Bohol 6325',
       href: '#',
-      gradient: 'from-purple-500 to-purple-600',
     },
     {
       icon: FiGithub,
       title: 'GitHub',
       value: 'github.com/McEmil1993',
       href: 'https://github.com/McEmil1993',
-      gradient: 'from-gray-700 to-gray-900',
     },
   ];
 
@@ -69,7 +65,7 @@ const Contact = () => {
       >
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Get In <span className="gradient-text">Touch</span>
+            Get In <span className="accent-text">Touch</span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Let's discuss your project or opportunity. I'm always open to new challenges!
@@ -105,9 +101,9 @@ const Contact = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="flex items-center space-x-4 p-4 glass rounded-xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group"
+                  className="flex items-center space-x-4 p-4 glass rounded-lg hover:border-primary-300 dark:hover:border-primary-800 transition-colors duration-200 group"
                 >
-                  <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${info.gradient} flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>
+                  <div className="w-14 h-14 rounded-lg bg-primary-50 dark:bg-primary-950 flex items-center justify-center text-primary-700 dark:text-primary-300">
                     <info.icon size={24} />
                   </div>
                   <div>
@@ -119,21 +115,22 @@ const Contact = () => {
             </div>
 
             {/* Additional Info */}
-            <div className="glass p-6 rounded-xl">
-              <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">
-                💼 Available For
+            <div className="glass p-6 rounded-lg">
+              <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-3 flex items-center space-x-2">
+                <FiBriefcase className="text-primary-700 dark:text-primary-300" />
+                <span>Available For</span>
               </h4>
               <ul className="space-y-2 text-gray-600 dark:text-gray-400 text-sm">
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-primary-700 dark:bg-primary-400 rounded-full"></span>
                   <span>Full-time opportunities</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-primary-700 dark:bg-primary-400 rounded-full"></span>
                   <span>Freelance projects</span>
                 </li>
                 {/* <li className="flex items-center space-x-2">
-                  <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-primary-700 dark:bg-primary-400 rounded-full"></span>
                   <span>Technical consultations</span>
                 </li> */}
                 <li className="flex items-center space-x-2">
@@ -151,7 +148,7 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <form onSubmit={handleSubmit} className="glass p-8 rounded-2xl space-y-6">
+            <form onSubmit={handleSubmit} className="glass p-8 rounded-lg space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                   Your Name *
@@ -218,7 +215,7 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="w-full px-8 py-4 bg-gradient-to-r from-primary-500 to-purple-600 hover:from-primary-600 hover:to-purple-700 text-white rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2"
+                className="w-full px-8 py-4 bg-primary-700 hover:bg-primary-800 text-white rounded-lg font-semibold transition-colors duration-200 shadow-sm flex items-center justify-center space-x-2"
               >
                 <span>Send Message</span>
                 <FiSend />

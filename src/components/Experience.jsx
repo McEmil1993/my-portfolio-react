@@ -4,10 +4,27 @@ import { FiBriefcase, FiCalendar, FiMapPin } from 'react-icons/fi';
 const Experience = () => {
   const experiences = [
     {
+      title: 'PHP CodeIgniter & Python Developer',
+      company: 'Vertere Global Solutions, Inc.',
+      location: 'Makati City, Philippines',
+      period: 'Oct 24, 2024 - Present',
+      type: 'Full-time',
+      responsibilities: [
+        'Developing and maintaining PHP CodeIgniter applications and backend services',
+        'Building and integrating APIs through AWS API Gateway',
+        'Creating Python Lambda functions for serverless backend workflows',
+        'Managing S3 bucket integrations for file storage and processing',
+        'Implementing third-party SMS notifications and email notification services',
+        'Handling SFTP file upload workflows and external system integrations',
+        'Supporting production systems with reliability, maintainability, and secure data handling in mind',
+      ],
+      technologies: ['PHP', 'CodeIgniter', 'Python Lambda', 'API Gateway', 'S3', 'SFTP', 'SMS API', 'Email Notifications'],
+    },
+    {
       title: 'Web Developer / Server Admin',
       company: 'Ground-Link Digital Advertising Services',
       location: 'Central Luzon, Philippines',
-      period: 'Dec 2022 – Aug 2024',
+      period: 'Dec 2022 - Aug 2024',
       type: 'Full-time',
       responsibilities: [
         'Creating online websites for fullstack developer',
@@ -27,7 +44,7 @@ const Experience = () => {
       title: 'Software Developer',
       company: 'Pharmacy',
       location: 'Talibon, Bohol',
-      period: 'Jan 2022 – Jun 2022',
+      period: 'Jan 2022 - Jun 2022',
       type: 'Full-time',
       responsibilities: [
         'Creating POS (Point of Sale) system and maintenance',
@@ -41,7 +58,7 @@ const Experience = () => {
       title: 'Web Developer / Software Engineer',
       company: 'Freelancer (Remote)',
       location: 'Remote',
-      period: 'Jun 2019 – Jan 2022',
+      period: 'Jun 2019 - Jan 2022',
       type: 'Freelance',
       responsibilities: [
         'Developed custom Inventory Management System',
@@ -63,7 +80,7 @@ const Experience = () => {
       >
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Work <span className="gradient-text">Experience</span>
+            Work <span className="accent-text">Experience</span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             My professional journey and key achievements
@@ -73,7 +90,7 @@ const Experience = () => {
         <div className="max-w-4xl mx-auto">
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-gradient-to-b from-primary-500 to-purple-600"></div>
+            <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-px bg-gray-300 dark:bg-gray-800"></div>
 
             {experiences.map((exp, index) => (
               <motion.div
@@ -87,12 +104,12 @@ const Experience = () => {
                 } md:w-1/2`}
               >
                 {/* Timeline Dot */}
-                <div className="absolute left-0 md:left-auto md:right-0 md:transform md:translate-x-1/2 w-4 h-4 bg-primary-500 rounded-full border-4 border-white dark:border-gray-900 z-10 top-6"></div>
+                <div className="absolute left-0 md:left-auto md:right-0 md:transform md:translate-x-1/2 w-4 h-4 bg-primary-700 dark:bg-primary-400 rounded-full border-4 border-gray-100 dark:border-gray-950 z-10 top-6"></div>
 
                 {/* Content Card */}
-                <div className="ml-8 md:ml-0 glass p-6 rounded-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="ml-8 md:ml-0 glass p-6 rounded-lg hover:border-primary-300 dark:hover:border-primary-800 transition-colors duration-200">
                   <div className={`flex items-center space-x-2 mb-3 ${index % 2 === 0 ? 'md:justify-end' : ''}`}>
-                    <span className="px-3 py-1 bg-primary-500/10 text-primary-500 rounded-full text-sm font-medium">
+                    <span className="px-3 py-1 bg-primary-50 dark:bg-primary-950 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium">
                       {exp.type}
                     </span>
                   </div>
@@ -121,7 +138,7 @@ const Experience = () => {
                   <ul className={`space-y-2 mb-4 text-gray-600 dark:text-gray-400 ${index % 2 === 0 ? 'md:text-right' : ''}`}>
                     {exp.responsibilities.map((resp, idx) => (
                       <li key={idx} className="text-sm flex items-start space-x-2">
-                        <span className={`mt-1.5 w-1.5 h-1.5 bg-primary-500 rounded-full flex-shrink-0 ${index % 2 === 0 ? 'md:order-2' : ''}`}></span>
+                        <span className={`mt-1.5 w-1.5 h-1.5 bg-primary-700 dark:bg-primary-400 rounded-full flex-shrink-0 ${index % 2 === 0 ? 'md:order-2' : ''}`}></span>
                         <span className="flex-1">{resp}</span>
                       </li>
                     ))}

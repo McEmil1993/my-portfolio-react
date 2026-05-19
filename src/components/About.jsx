@@ -2,26 +2,29 @@ import { motion } from 'framer-motion';
 import { FiCode, FiServer, FiGitBranch, FiDatabase } from 'react-icons/fi';
 
 const About = () => {
+  const objective =
+    'Fullstack Developer and Server Administrator with solid experience in developing web applications, mobile applications, APIs, backend services, and database-driven systems. Skilled in designing practical solutions from frontend interfaces to backend logic, database structure, deployment setup, and server maintenance. Capable of handling projects from planning and development up to deployment, monitoring, and continuous improvement, with focus on usability, reliability, security, and long-term maintainability. Experienced in transforming manual workflows into organized digital systems that improve data tracking, reduce repetitive tasks, and support faster decision-making. Equipped with hands-on expertise in PHP Laravel, CodeIgniter, Node.js, Express JS, TypeScript, Python, Java, C#, VB.net, Vue.js, React, React Native, Next.js, JavaScript, HTML, CSS, Tailwind CSS, and Bootstrap to deliver scalable and maintainable software. Experienced in database management with MySQL/MariaDB, MongoDB, PostgreSQL, and Redis, as well as deployment automation, server configuration, and infrastructure management using Docker, Nginx, Apache, Git, GitLab CI/CD, GitHub CI/CD, AWS, and Linux/Ubuntu. Committed to building systems that are practical, easy to use, stable in production, and adaptable to future operational needs.';
+
   const highlights = [
     {
       icon: FiCode,
       title: 'Full Stack Development',
-      description: 'Expert in PHP Laravel, Node.js, Vue.js, and modern web technologies',
+      description: 'Builds web applications, APIs, mobile apps, backend services, and frontend interfaces',
     },
     {
       icon: FiServer,
       title: 'DevOps & System Admin',
-      description: 'Skilled in Docker, CI/CD pipelines, Nginx, and server management',
+      description: 'Handles deployment, server configuration, monitoring, security, and maintenance',
     },
     {
       icon: FiGitBranch,
       title: 'Version Control',
-      description: 'Proficient with Git, GitLab CI/CD, and collaborative development',
+      description: 'Uses Git, GitLab CI/CD, and GitHub CI/CD for organized and reliable delivery',
     },
     {
       icon: FiDatabase,
       title: 'Database Management',
-      description: 'Experience with MySQL, MariaDB, MongoDB, and Redis',
+      description: 'Designs and manages MySQL, MariaDB, PostgreSQL, MongoDB, and Redis databases',
     },
   ];
 
@@ -35,7 +38,7 @@ const About = () => {
       >
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            About <span className="gradient-text">Me</span>
+            About <span className="accent-text">Me</span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Passionate developer with a strong foundation in both development and deployment
@@ -45,18 +48,14 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Description */}
           <div className="space-y-6">
-            <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-              I'm a <span className="text-primary-500 font-semibold">Full Stack Developer and DevOps Engineer</span> with 
-              over 6 years of experience in web development and system administration. My expertise spans across 
-              backend development with PHP Laravel and Node.js, frontend development with Vue.js, and infrastructure 
-              management with Docker and CI/CD pipelines.
-            </p>
-            
-            <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-              I specialize in creating scalable web applications, implementing robust DevOps practices, and ensuring 
-              high availability of services. My broad skill set allows me to streamline operations, drive efficiency, 
-              and deliver high-quality solutions that contribute to team success.
-            </p>
+            <div>
+              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+                Objectives
+              </h3>
+              <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+                {objective}
+              </p>
+            </div>
 
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
@@ -66,7 +65,7 @@ const About = () => {
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-gray-100">Education</h4>
                   <p className="text-gray-600 dark:text-gray-400">
-                    BS in Information Technology in Software Engineering
+                    BS in Information Technology
                   </p>
                   <p className="text-sm text-gray-500 dark:text-gray-500">
                     Trinidad Municipal College (2018 - 2022)
@@ -97,10 +96,10 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="glass p-6 rounded-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+                className="glass p-6 rounded-lg hover:border-primary-300 dark:hover:border-primary-800 transition-colors duration-200"
               >
-                <div className="w-12 h-12 bg-primary-500/10 dark:bg-primary-500/20 rounded-lg flex items-center justify-center mb-4">
-                  <item.icon className="text-primary-500 text-2xl" />
+                <div className="w-12 h-12 bg-primary-50 dark:bg-primary-950 rounded-lg flex items-center justify-center mb-4">
+                  <item.icon className="text-primary-700 dark:text-primary-300 text-2xl" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-100">
                   {item.title}
